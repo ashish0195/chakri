@@ -1,7 +1,8 @@
 # Chakri
 
 **The Diwali party game.** A free web game from 9io for Diwali night: one phone, no sign-up, nothing
-leaves the phone. English first, with desi flavor, and a Hinglish switch.
+leaves the phone. English first, with desi flavor, and a Hinglish switch. Live at
+[chakri.9io.ai](https://chakri.9io.ai).
 
 ## Two ways to play
 
@@ -54,9 +55,22 @@ Browsers don't load modules from `file://`, so serve the folder (`tools/serve.py
 npm run serve      # then open http://localhost:8642
 ```
 
-`og.png` (the 1200 × 630 link preview WhatsApp shows) and `apple-touch-icon.png` are drawn from the
+`og.jpg` (the 1200 × 630 link preview WhatsApp shows) and `apple-touch-icon.png` are drawn from the
 game's own art by `tools/og.html` and `tools/touch-icon.html`; `tools/make-images.sh` renders them
-with headless Chrome while the server runs.
+with headless Chrome while the server runs. The preview is a JPEG because WhatsApp drops previews
+whose image is over about 300 KB.
+
+## Deploy
+
+```sh
+tools/deploy.sh
+```
+
+It runs the tests, copies the page, `src/` and the images to `/var/www/chakri` on the 9io web server
+(the key is `~/Desktop/key/io.pem`), and checks that https://chakri.9io.ai answers. The Nginx site is
+`sites/_deploy/chakri.9io.ai.conf` in the stocks-bot repo; Certbot added HTTPS on the server and
+renews it. HTML, JavaScript and CSS are served with `Cache-Control: no-cache`, so phones pick up a
+deploy on their next load.
 
 ## Tests
 
@@ -68,10 +82,6 @@ They check every question and card (both languages, placeholders, lengths, no fi
 dares, no gendered Hinglish verbs), the rules of both modes, and that every UI string exists in both
 languages.
 
-## Before launch
+## Still to do
 
-- Set the real domain in `src/config.js` and in the `og:` tags of `index.html` (both say
-  `chakri.9io.ai`, which doesn't resolve yet).
-- Serve JavaScript and CSS with a short cache (or revalidation) while the game is still changing:
-  a phone holding yesterday's `app.js` next to today's decks can break.
 - Have two or three people who celebrate Diwali read the decks, one in the US and one in India.
