@@ -25,6 +25,7 @@
 - Privacy: no accounts; the browser on that phone keeps only settings: the language, the sound setting, the last names typed, the chosen decks or jodi, and recently played questions.
 - Built with plain HTML, CSS and JavaScript modules: SVG art drawn in code, sounds synthesised with Web Audio, no framework or dependencies.
 - Developer: 9io (https://9io.ai/). More games: https://9io.ai/games
+- Press kit: https://chakri.9io.ai/press/ (fact sheet, descriptions, screenshots and the icon)
 
 ## Articles
 
