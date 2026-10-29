@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chakri link preview</title>
+<!-- The 1200 × 630 link-preview image (og.png). Render it with tools/make-og.sh. -->
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif;
+    color: #fff3dc;
+    background:
+      radial-gradient(70% 90% at 50% 120%, rgba(255, 159, 28, 0.32), transparent 62%),
+      radial-gradient(60% 70% at 15% -20%, rgba(183, 140, 255, 0.24), transparent 60%),
+      linear-gradient(180deg, #160b2e, #26103f 60%, #3a1450);
+    position: relative;
+  }
+  .lights { position: absolute; top: 0; left: 0; width: 1200px; height: 84px; }
+  .lights svg { width: 100%; height: 100%; }
+  .left { position: absolute; left: 84px; top: 136px; width: 640px; }
+  .mark { display: flex; align-items: center; gap: 22px; }
+  .mark svg { width: 150px; height: 150px; }
+  h1 {
+    margin: 0; font-size: 124px; font-weight: 900; letter-spacing: -2px; line-height: 1;
+    background: linear-gradient(180deg, #fff1bf, #ffcf5a 45%, #f2961c);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .tag { margin: 26px 0 0; font-size: 44px; font-weight: 800; }
+  .modes { margin: 16px 0 0; font-size: 32px; font-weight: 700; color: #cbb8e6; line-height: 1.4; }
+  .free { margin: 28px 0 0; display: inline-block; padding: 12px 26px; border-radius: 999px; font-size: 26px; font-weight: 800; color: #3a1206; background: linear-gradient(180deg, #ffe08a, #ff9f1c); }
+  .art { position: absolute; right: 70px; top: 104px; width: 470px; height: 470px; }
+  .art svg { width: 100%; height: 100%; filter: drop-shadow(0 0 24px rgba(255, 191, 64, 0.45)); }
+</style>
+</head>
+<body>
+  <div class="lights" id="lights"></div>
+  <div class="left">
+    <div class="mark"><span id="chakri"></span><h1>Chakri</h1></div>
+    <p class="tag">The Diwali party game</p>
+    <p class="modes">Jodi Check · Chakri Truth or Dare</p>
+    <span class="free">Free · one phone · no sign-up</span>
+  </div>
+  <div class="art" id="art"></div>
+  <script type="module">
+    import { DEFS, chakri, lights, rangoli } from '../src/art.js';
+    document.body.insertAdjacentHTML('afterbegin', `<svg width="0" height="0" style="position:absolute"><defs>${DEFS}</defs></svg>`);
+    document.getElementById('lights').innerHTML = lights({ swags: 13, stretch: true });
+    document.getElementById('chakri').innerHTML = chakri();
+    document.getElementById('art').innerHTML = rangoli(Array(12).fill('lit'));
+    document.body.dataset.ready = 'yes';
+  </script>
+</body>
+</html>

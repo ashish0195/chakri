@@ -1,0 +1,10 @@
+{
+  "name": "chakri",
+  "private": true,
+  "description": "Chakri, the Diwali party game: Jodi Check and Chakri Truth or Dare, for the web.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "serve": "python3 tools/serve.py 8642"
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chakri home screen icon</title>
+<!-- The 180 × 180 home screen icon (apple-touch-icon.png). Render it with tools/make-images.sh. -->
+<style>
+  html, body { margin: 0; width: 180px; height: 180px; overflow: hidden; }
+  body {
+    display: grid;
+    place-items: center;
+    background: radial-gradient(80% 80% at 50% 60%, #3a1450, #160b2e);
+  }
+  #chakri { width: 150px; height: 150px; margin-top: 14px; }
+  #chakri svg { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+  <div id="chakri"></div>
+  <script type="module">
+    import { chakri } from '../src/art.js';
+    document.getElementById('chakri').innerHTML = chakri({ withDefs: true });
+  </script>
+</body>
+</html>
