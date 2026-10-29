@@ -723,7 +723,7 @@ body[data-screen]:not([data-screen="home"]) .about { display: none; }
   margin: 0 0 6px;
   background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
 }
-.about h2 { margin: 30px 0 10px; font-size: 22px; font-weight: 900; line-height: 1.2; color: var(--gold); }
+.about h1, .about h2 { margin: 30px 0 10px; font-size: 22px; font-weight: 900; line-height: 1.2; color: var(--gold); }
 .about h3 { margin: 18px 0 4px; font-size: 17px; font-weight: 800; }
 .about p { margin: 0 0 12px; color: rgba(255, 243, 220, 0.88); }
 .about ol, .about ul { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 8px; }

@@ -2,10 +2,14 @@
 # Deploys Chakri to https://chakri.9io.ai: runs the tests, then copies the page, its modules and the
 # images to /var/www/chakri on the 9io web server. The Nginx site is sites/_deploy/chakri.9io.ai.conf
 # in the stocks-bot repo. Extra ssh options can go in SSH_OPTS.
+#
+# The server and key aren't kept in the repository. Set CHAKRI_HOST (user@server) and CHAKRI_KEY
+# (path to the ssh key) in the environment, or in tools/deploy.env, which git ignores.
 set -e
 cd "$(dirname "$0")/.."
-HOST=ubuntu@65.2.134.249
-KEY="$HOME/Desktop/key/io.pem"
+[ -f tools/deploy.env ] && . tools/deploy.env
+HOST=${CHAKRI_HOST:?"set CHAKRI_HOST=user@server, or put it in tools/deploy.env"}
+KEY=${CHAKRI_KEY:?"set CHAKRI_KEY=/path/to/key, or put it in tools/deploy.env"}
 
 npm test >/dev/null || { echo "tests failed; not deploying" >&2; exit 1; }
 

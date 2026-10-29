@@ -76,7 +76,8 @@ tools/deploy.sh
 ```
 
 It runs the tests, copies the page, `src/` and the images to `/var/www/chakri` on the 9io web server
-(the key is `~/Desktop/key/io.pem`), and checks that https://chakri.9io.ai answers. The Nginx site is
+(the server and ssh key come from `CHAKRI_HOST` and `CHAKRI_KEY`, set in the environment or in
+`tools/deploy.env`, which git ignores), and checks that https://chakri.9io.ai answers. The Nginx site is
 `sites/_deploy/chakri.9io.ai.conf` in the stocks-bot repo; Certbot added HTTPS on the server and
 renews it. HTML, JavaScript and CSS are served with `Cache-Control: no-cache`, so phones pick up a
 deploy on their next load.
