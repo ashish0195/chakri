@@ -26,16 +26,19 @@
 
 html { -webkit-text-size-adjust: 100%; background: var(--night-1); }
 
+/* No background on body: it would paint over the night sky below. html has the plain colour, for
+   overscroll. */
 body {
   margin: 0;
   min-height: 100dvh;
   color: var(--cream);
   font-family: var(--font);
-  background: var(--night-1);
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
 }
 
+/* The night sky: lilac glow at the top, marigold at the bottom. Fixed, so it stays put while a screen
+   scrolls. */
 body::before {
   content: "";
   position: fixed;
@@ -45,6 +48,11 @@ body::before {
     radial-gradient(120% 60% at 50% 112%, rgba(255, 159, 28, 0.24), transparent 62%),
     radial-gradient(90% 55% at 50% -12%, rgba(183, 140, 255, 0.2), transparent 60%),
     linear-gradient(180deg, var(--night-1), var(--night-2) 58%, var(--night-3));
+}
+/* As tall as the screen gets once a phone's toolbars slide away, so no plain strip shows at the bottom
+   while they do. */
+@supports (height: 100lvh) {
+  body::before { bottom: auto; height: 100lvh; }
 }
 
 body.has-sheet { overflow: hidden; }
