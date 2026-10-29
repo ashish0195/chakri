@@ -703,6 +703,49 @@ h1:focus { outline: none; }
   animation: spin 0.8s linear infinite;
 }
 
+/* ── About (plain HTML under the home screen) ─────────────────────────────────────────────────── */
+
+.about {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 6px 16px calc(env(safe-area-inset-bottom) + 44px);
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Only under the home screen: app.js puts the current screen on body. Without JavaScript it shows. */
+body[data-screen]:not([data-screen="home"]) .about { display: none; }
+.about::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 0 6px;
+  background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
+}
+.about h2 { margin: 30px 0 10px; font-size: 22px; font-weight: 900; line-height: 1.2; color: var(--gold); }
+.about h3 { margin: 18px 0 4px; font-size: 17px; font-weight: 800; }
+.about p { margin: 0 0 12px; color: rgba(255, 243, 220, 0.88); }
+.about ol, .about ul { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 8px; }
+.about li::marker { color: var(--gold); font-weight: 800; }
+.about a { color: var(--gold-2); text-underline-offset: 3px; }
+.about strong { color: var(--cream); }
+.about table { width: 100%; margin: 4px 0 14px; border-collapse: collapse; font-size: 15px; }
+.about caption {
+  padding-bottom: 6px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.about th, .about td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--line); }
+.about th { color: var(--muted); font-weight: 800; }
+.about th:last-child, .about td:last-child { text-align: right; }
+.about-links { list-style: none; padding-left: 0; }
+.about-from { margin-top: 26px; text-align: center; font-size: 14px; color: var(--muted); }
+
 @media (min-width: 640px) {
   .backdrop { align-items: center; }
   .sheet { border-radius: 28px; border-bottom: 1px solid var(--gold-line); }

@@ -101,6 +101,8 @@ function draw() {
   const screen = screenOf(name);
   // A redraw of the same screen (the next question, a reveal) doesn't fade the whole screen in again.
   const same = name === lastDrawn;
+  // The page's plain-HTML .about section shows only under the home screen (see style.css).
+  document.body.dataset.screen = name;
   root.innerHTML = markup(html`${topbar(name)}<div class="screen-wrap${same ? ' is-same' : ''}" data-screen="${name}">${screen.view()}</div>`);
   unmount = screen.mount?.(root.querySelector('.screen-wrap')) ?? null;
 

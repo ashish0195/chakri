@@ -12,6 +12,8 @@ npm test >/dev/null || { echo "tests failed; not deploying" >&2; exit 1; }
 STAGE=$(mktemp -d)
 trap 'rm -rf "$STAGE"' EXIT
 cp -R index.html style.css icon.svg apple-touch-icon.png og.jpg src "$STAGE/"
+# For search engines and AI assistants; the .txt named after the key is IndexNow's proof of ownership.
+cp robots.txt sitemap.xml llms.txt f628e47d659bd013d7feaca2cb8426d2.txt "$STAGE/"
 # mktemp makes the folder private, and rsync -a would carry that over to /var/www/chakri.
 chmod -R u=rwX,go=rX "$STAGE"
 # braces matter: zsh would read "$HOST:/var" as a history modifier

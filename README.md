@@ -36,9 +36,14 @@ Plain HTML, CSS and JavaScript modules, no build step and no dependencies.
 | `src/sound.js` | Every sound, synthesized with Web Audio; nothing is sampled. |
 | `src/card.js`, `src/sheet.js` | The 1080 × 1920 result cards and the share sheet (share, WhatsApp, save, copy). |
 | `src/config.js` | The site's address, used on the cards and in the share text. |
+| `robots.txt`, `sitemap.xml`, `llms.txt` | For search engines and AI assistants. The key-named `.txt` is IndexNow's proof that we own the site. |
 
 Hinglish lines are written gender-neutral: no verb forms that change with a player's gender. The
 tests check for the common ones.
+
+Under the home screen, `index.html` has a plain-HTML section on how both games work, with a FAQ,
+for people who scroll and for search engines. The same answers are in its JSON-LD, so change both
+together. `app.js` puts the current screen on `body`, and the section hides during a game.
 
 ## Content rules
 

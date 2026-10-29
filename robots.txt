@@ -1,0 +1,5 @@
+# Chakri, the Diwali party game. Everything here is public.
+User-agent: *
+Allow: /
+
+Sitemap: https://chakri.9io.ai/sitemap.xml
