@@ -11,7 +11,7 @@ export const STRINGS = {
   'home.tod.title': ['Chakri Truth or Dare', 'Chakri Truth or Dare'],
   'home.tod.sub': ['Spin the chakri. Pick your patakha. No backing out.', 'Chakri ghumao. Patakha chuno. Peeche hatna mana hai.'],
   'home.tod.meta': ['2–12 players · phone in the middle', '2–12 players · phone beech mein'],
-  'home.privacy': ['No sign-up. Nothing leaves your phone.', 'No sign-up. Kuch bhi phone se bahar nahi jaata.'],
+  'home.privacy': ['No sign-up. Nothing you type leaves your phone.', 'No sign-up. Tumhara likha kuch bhi phone se bahar nahi jaata.'],
   'home.from': ['A Diwali party game from 9io', '9io ka Diwali party game'],
   'home.spin': ['Spin the chakri', 'Chakri ghumao'],
   'tod.play.title': ['Chakri Truth or Dare', 'Chakri Truth or Dare'],

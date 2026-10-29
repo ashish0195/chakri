@@ -1,7 +1,7 @@
 # Chakri
 
 **The Diwali party game.** A free web game from 9io for Diwali night: one phone, no sign-up, nothing
-leaves the phone. English first, with desi flavor, and a Hinglish switch. Live at
+you type leaves the phone. English first, with desi flavor, and a Hinglish switch. Live at
 [chakri.9io.ai](https://chakri.9io.ai).
 
 ## Two ways to play
@@ -44,6 +44,10 @@ tests check for the common ones.
 Under the home screen, `index.html` has a plain-HTML section on how both games work, with a FAQ,
 for people who scroll and for search engines. The same answers are in its JSON-LD, so change both
 together. `app.js` puts the current screen on `body`, and the section hides during a game.
+
+The PostHog block at the end of `index.html`'s head counts visits in cookieless mode: no cookies
+or browser storage, and page views only. Autocapture is off, so no button text, names or answers
+are sent; keep it off.
 
 ## Content rules
 
