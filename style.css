@@ -290,6 +290,7 @@ h1:focus { outline: none; }
 .home-foot { margin-top: auto; text-align: center; color: var(--muted); font-size: 14px; }
 .home-foot p { margin: 4px 0; }
 .home-foot .from { color: rgba(255, 243, 220, 0.55); font-size: 13px; }
+.home-foot a { color: var(--gold-2); text-underline-offset: 3px; }
 
 /* ── Setup ────────────────────────────────────────────────────────────────────────────────────── */
 

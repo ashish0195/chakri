@@ -26,6 +26,7 @@
 - Built with plain HTML, CSS and JavaScript modules: SVG art drawn in code, sounds synthesised with Web Audio, no framework or dependencies.
 - Developer: 9io (https://9io.ai/). More games: https://9io.ai/games
 - Press kit: https://chakri.9io.ai/press/ (fact sheet, descriptions, screenshots and the icon)
+- How to play: https://chakri.9io.ai/guide/ (the rules of both games, the decks, the result cards, the Hinglish switch and sound, tips, which parts suit a wedding or New Year's Eve, and an FAQ)
 
 ## Articles
 
@@ -33,3 +34,5 @@
 - [Diwali truth or dare: 60 questions and dares for family and friends](https://9io.ai/blog/diwali-truth-or-dare-questions)
 - [How well do you know me? 40 Diwali questions for couples and siblings](https://9io.ai/blog/how-well-do-you-know-me-questions)
 - [Diwali party games for family, kids, friends and the office](https://9io.ai/blog/diwali-party-games)
+- [Indian wedding party games for sangeet, mehndi and haldi](https://9io.ai/blog/indian-wedding-party-games)
+- [Party games on one phone: pass-the-phone games and how to host them](https://9io.ai/blog/one-phone-party-games)

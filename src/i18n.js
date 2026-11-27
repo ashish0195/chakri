@@ -13,6 +13,7 @@ export const STRINGS = {
   'home.tod.meta': ['2–12 players · phone in the middle', '2–12 players · phone beech mein'],
   'home.privacy': ['No sign-up. Nothing you type leaves your phone.', 'No sign-up. Tumhara likha kuch bhi phone se bahar nahi jaata.'],
   'home.from': ['A Diwali party game from 9io', '9io ka Diwali party game'],
+  'home.guide': ['How to play', 'Kaise khelein'],
   'home.spin': ['Spin the chakri', 'Chakri ghumao'],
   'tod.play.title': ['Chakri Truth or Dare', 'Chakri Truth or Dare'],
 

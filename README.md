@@ -37,6 +37,7 @@ Plain HTML, CSS and JavaScript modules, no build step and no dependencies.
 | `src/card.js`, `src/sheet.js` | The 1080 × 1920 result cards and the share sheet (share, WhatsApp, save, copy). |
 | `src/config.js` | The site's address, used on the cards and in the share text. |
 | `press/` | The press kit: fact sheet, descriptions, full-size screenshots and a zip of them. |
+| `guide/` | How to play both games, the decks, the result cards, tips and an FAQ, in the press kit's look. Its FAQ JSON-LD matches the visible answers word for word. |
 | `robots.txt`, `sitemap.xml`, `llms.txt` | For search engines and AI assistants. The key-named `.txt` is IndexNow's proof that we own the site. |
 
 Hinglish lines are written gender-neutral: no verb forms that change with a player's gender. The

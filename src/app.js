@@ -62,7 +62,7 @@ register({
         </div>
         <footer class="home-foot">
           <p>${t('home.privacy')}</p>
-          <p class="from">${t('home.from')}</p>
+          <p class="from">${t('home.from')} · <a href="guide/">${t('home.guide')}</a></p>
         </footer>
       </section>`,
     },
